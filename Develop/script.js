@@ -152,28 +152,22 @@ function generatePassword() {
   console.log(wantsUppercase);
   console.log(numChars);
   // create password from these arrays
-  array = [];
+  var array = [];
   //create array including all possible character values based on user preferences
   function createArray(special, nums, lower, upper) {
     if (special) {
-      var array = specialChars;
-      return array;
+      array = specialChars;
     }
-    console.log(array);
     if (nums) {
       array = array.concat(numbers);
-      return array;
     }
-    console.log(array);
     if (lower) {
       array = array.concat(lowercase);
-      return array;
     }
-    console.log(array);
     if (upper) {
       array = array.concat(uppercase);
-      return array;
     }
+    return array;
   }
   console.log(array);
 

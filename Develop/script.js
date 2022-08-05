@@ -15,7 +15,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 //arrays of possible characters (collapse these)
-var uppercase = [
+var uppercaseArray = [
   "A",
   "B",
   "C",
@@ -43,7 +43,7 @@ var uppercase = [
   "Y",
   "Z",
 ];
-var lowercase = [
+var lowercaseArray = [
   "a",
   "b",
   "c",
@@ -71,8 +71,8 @@ var lowercase = [
   "y",
   "z",
 ];
-var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var specialChars = [
+var numbersArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+var specialCharsArray = [
   " ",
   '"',
   "!",
@@ -160,16 +160,16 @@ function generatePassword() {
   //create array including all possible character values based on user preferences
   function createArray(special, nums, lower, upper) {
     if (special) {
-      array = specialChars;
+      array = specialCharsArray;
     }
     if (nums) {
-      array = array.concat(numbers);
+      array = array.concat(numbersArray);
     }
     if (lower) {
-      array = array.concat(lowercase);
+      array = array.concat(lowercaseArray);
     }
     if (upper) {
-      array = array.concat(uppercase);
+      array = array.concat(uppercaseArray);
     }
     return array;
   }
